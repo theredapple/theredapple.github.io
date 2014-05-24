@@ -1,0 +1,21 @@
+v1.3.1
+- fixed header in image.php (neko-contact-ajax-plugin)
+- updated documentation
+
+v1.3
+- fixed social icon display in team boxes
+- fixed owl carousel issue on mobile for one page layout
+
+v1.2
+- modified videowrapper to fit video size.
+- fixed bug megamenu responsive
+- added 5 header options
+- updated documentation
+
+
+v1.1
+- update documentation (animations)
+- update rollover effect (optimized for iPad)
+- fixed contact form (updated to latest jquery version)
+- optimized carousel display on tablet and mobile (home1.html)
+
