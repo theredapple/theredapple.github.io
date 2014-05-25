@@ -1,4 +1,4 @@
-/* 
+/*
 Document   : layout
 Author     : Little Neko
 Description: layout styles
@@ -14,8 +14,8 @@ Description: layout styles
 #GENERAL
 #PARALLAX STUFF
 #HEADER
-#MAIN MENU 
-#FOOTER 
+#MAIN MENU
+#FOOTER
 #SLIDERS
 #BLOG
 #NEWS
@@ -72,8 +72,8 @@ Description: layout styles
 .panel-heading .accordion-toggle:after {
 	/* symbol for "opening" panels */
 	font-family: 'custom-icons';
-	content: "\e803";    
-	float: right;      
+	content: "\e803";
+	float: right;
 }
 
 /** expand the link to fill the whole tab **/
@@ -86,7 +86,7 @@ Description: layout styles
 
 .panel-heading .accordion-toggle.collapsed:after {
 	/* symbol for "collapsed" panels */
-	content: '\e805';   
+	content: '\e805';
 }
 
 .accordion-toggle i {margin-right: 10px;}
@@ -94,8 +94,8 @@ Description: layout styles
 label {
 	font-size:22px;
 	font-weight: 300;
-	margin-bottom: 22px;	
-} 
+	margin-bottom: 22px;
+}
 
 
 .navbar-nav{ margin-left:0; margin-right:0; }
@@ -202,7 +202,7 @@ pre code{white-space: pre-line;}
 	height: 40px;
 	display: block;
 	text-align: center;
-	font-size:18px;	
+	font-size:18px;
 }
 
 .iconRounded:before{margin: auto;text-align: center; line-height: 40px; }
@@ -217,7 +217,7 @@ pre code{white-space: pre-line;}
 }
 
 .iconBig.iconRounded:before{
-	line-height: 100px;	
+	line-height: 100px;
 }
 
 .iconMedium {
@@ -230,7 +230,7 @@ pre code{white-space: pre-line;}
 }
 
 .iconMedium.iconRounded:before{
-	line-height: 66px;	
+	line-height: 66px;
 }
 
 .iconSmall:before {
@@ -243,7 +243,7 @@ pre code{white-space: pre-line;}
 }
 
 .iconSmall.iconRounded:before{
-	line-height: 26px;	
+	line-height: 26px;
 }
 
 /*** icon Headings ***/
@@ -265,10 +265,10 @@ pre code{white-space: pre-line;}
 
 /* box icons */
 .boxIcon a{
-	padding:33px;
+	padding: 24px; /* original value was 33px; smaller makes more sense for square images */
 	text-align: center;
 	display: block;
-	margin-bottom:11px;
+	margin-bottom: 11px;
 	-webkit-transition: all 0.3s ease-out;
 	-moz-transition: all 0.3s ease-out;
 	-o-transition: all 0.3s ease-out;
@@ -286,7 +286,7 @@ pre code{white-space: pre-line;}
 }
 .boxIcon a span {display:none;}
 .boxIcon i {margin: 36px auto; display: block; border-radius:50%;}
-.boxIcon h2 {font-size: 18px; font-weight: 400; margin-bottom: 16px;} 
+.boxIcon h2 {font-size: 18px; font-weight: 400; margin-bottom: 16px;}
 .boxIcon p {margin: 0;}
 
 .boxIcon a:hover{text-decoration:none; }
@@ -298,42 +298,49 @@ pre code{white-space: pre-line;}
 	margin:11px auto;
 }
 
+/* NOTE: modified some sizes and added .sqrImgBorder class to img box */
 /* img box */
 .boxIcon a img{
-	
 	/*width: 180px;
 	height: 180px;*/
 	width: 100%;
 	height: 100%;
 	-webkit-backface-visibility: hidden;
 }
-.boxIcon a:hover img{ } 
 
 .boxIcon a .imgBorder{
 	border: 4px solid #F7F7F7;
 	background: #F7F7F7;
 	border-radius: 50%!important;
 
-	width: 180px;
-	height: 180px;
-	margin: 18px auto 22px auto;
+	width: 220px;
+	height: 220px;
+	margin: 30px auto 30px auto;
 }
-.boxIcon a .imgBorder img{
+
+.boxIcon a .sqrImgBorder{
+	width: 220px;
+	height: 220px;
+	margin: 30px auto 30px auto;
+}
+
+.boxIcon a .imgBorder img, .boxIcon a .sqrImgBorder img{
 	-webkit-transition: all 0.3s ease-out;
 	-moz-transition: all 0.3s ease-out;
 	-o-transition: all 0.3s ease-out;
 	-ms-transition: all 0.3s ease-out;
 	transition: all 0.3s ease-out;
 	-webkit-backface-visibility: hidden;
-	width: 172px;
-	height: 172px;
+	width: 210px;
+	height: 210px;
 }
 
-
-.boxIcon a:hover .imgBorder img{
-	transform: scale(0.8,0.8);
-	-webkit-transform: scale(0.8,0.8);
+.boxIcon a:hover img, .boxIcon a:hover .imgBorder img{
+	transform: scale(1.2,1.2);
+	-webkit-transform: scale(1.2,1.2);
 }
+
+.boxIcon a:hover img{}
 
 /*** testimonial **/
 .boxTestimonial blockquote{
@@ -452,7 +459,7 @@ hr.lineSmall {
 .imgBorder {
 	border-radius:11px;
 	overflow: hidden;
-	/*padding:5px;*/	
+	/*padding:5px;*/
 }
 
 .backFaceVisibilityHidden{ -webkit-backface-visibility: hidden; }
@@ -526,7 +533,7 @@ hr.lineSmall {
 	.boxIconServices.posLeft .boxContent {padding:0 152px 0 0;text-align: right;}
 	.boxIconServices i { float:left;}
 	.boxIconServicest .boxContent {padding:0 0 0 152px;}
-	
+
 }
 
 @media(min-width:1200px){
@@ -581,7 +588,7 @@ h1 strong{
 	display: inline-block;
 	padding:33px;
 	border-radius: 22px;
-	
+
 	margin-bottom: 0;
 }
 
@@ -607,7 +614,7 @@ h2 {
 	position: relative;
 	overflow:hidden;
 
-	font-weight: 300;	
+	font-weight: 300;
 }
 
 h2:after{
@@ -619,7 +626,7 @@ h2:after{
 	width: 100%;
 	position: absolute;
 	margin-left: 11px;
-	top:50%;		
+	top:50%;
 }
 .boxIcon h2:after, .pricingBloc h2:after, h2.subTitle:after, .generatedMoreLink h2:after,.boxIconServices h2:after, .paralaxText h2:after, .owlCaption h2:after, h2.text-center:after {content:none; }/*remove lines after H2 when required*/
 
@@ -728,7 +735,7 @@ hr {
 @media(max-width:767px){}
 
 @media(min-width:768px){
-	
+
 	body{padding-top: 88px;}
 	h1 {
 		font-size: 40px;
@@ -746,7 +753,7 @@ hr {
 		font-size: 44px;
 	}
 
-	
+
 }
 @media(min-width:992px){}
 
@@ -809,7 +816,7 @@ hr {
 .ctaBox{padding:33px 11px;}
 .ctaBoxFullwidth{padding:0;}
 
-.ctaBox a {margin-top:22px;} 
+.ctaBox a {margin-top:22px;}
 .ctaBox h1{
 	font-size:22px;
 	line-height: 33px;
@@ -845,8 +852,8 @@ a.btnRight{float:right;}
 }
 
 @media(min-width:992px){
-	
-	.ctaBox a {float:right; margin-top:0;} 
+
+	.ctaBox a {float:right; margin-top:0;}
 
 	a.btnLeft{float:left;}
 }
@@ -881,7 +888,7 @@ a.btnRight{float:right;}
 
 }
 .paralaxMask {
-	width:100%; 
+	width:100%;
 	height:100%;
 	overflow:hidden;
 	position:absolute;
@@ -1124,7 +1131,7 @@ ul.quickMenu li a.linkLeft {
 		margin: 27px 11px 0 0;
 		line-height:1em;
 	}
-	
+
 	.header5 .navbar-nav > li#lastMenu > a {padding-right:10px;}
 	.header5 .navbar-nav ul li a {padding:10px; margin: 0 10px;}
 	.header5 .navbar-nav > li > ul, .header5 .navbar-nav .nekoMegaMenu {
@@ -1244,7 +1251,7 @@ ul.quickMenu li a.linkLeft {
 @media(min-width:768px){
 
 	#mainHeader .pull-right{ float:right !important; }
-	
+
 	.navbar-nav > li > a{
 		font-size: 14px;
 		font-weight: 400;
@@ -1252,7 +1259,7 @@ ul.quickMenu li a.linkLeft {
 		line-height:44px;
 		vertical-align:middle;
 	}
-	
+
 
 	.navbar-nav > li > a i {
 		display: block;
@@ -1269,7 +1276,7 @@ ul.quickMenu li a.linkLeft {
 		width: 180px;
 	}
 
-	
+
 	.navbar-nav > li.sep{display: block;}
 
 	.navbar-nav > li.sep:before{
@@ -1314,7 +1321,7 @@ ul.quickMenu li a.linkLeft {
 		display:block;
 		width:100%;
 	}
-	
+
 	.navbar-nav .nekoMegaMenu{
 		width:100%;
 		position:absolute;
@@ -1369,12 +1376,12 @@ ul.quickMenu li a.linkLeft {
 .newsText{padding:20px 20px 20px 20px;}
 .newsText h3{margin-bottom: 8px;}
 .date{font-size:12px; line-height:12px;font-style: italic;}
-.newsText p{font-size:12px;} 
+.newsText p{font-size:12px;}
 
 /* END NEWS
 ================================================== */
 
-/* FOOTER 
+/* FOOTER
 ================================================== */
 
 footer{padding:44px 0 0 0;}
@@ -1402,7 +1409,7 @@ footer{padding:44px 0 0 0;}
 	.footer5 #footerRights p{float: left;}
 	.footer5 #footerRights .socialNetwork{float: right;}
 }
-/* END FOOTER 
+/* END FOOTER
 ================================================== */
 
 
@@ -1466,7 +1473,7 @@ a#nextslide:hover, a#prevslide:hover {
 
 
 .owl-theme .owl-controls .owl-buttons div{
-	
+
 	background:none;
 	font-family: 'custom-icons';
 	font-size:22px;
@@ -1512,7 +1519,7 @@ a#nextslide:hover, a#prevslide:hover {
 #cameraSliderWrapper .camera_target_content {border-radius: 11px!important;}
 /** camera_neko_skin **/
 .camera_neko_skin .camera_prevThumbs div {
-	
+
 
 	background-position: -160px -280px;
 }
@@ -1534,7 +1541,7 @@ a#nextslide:hover, a#prevslide:hover {
 }
 .camera_neko_skin .camera_prev:before{
 	content:'\e804';
-	
+
 }
 
 .camera_neko_skin .camera_next:before {
@@ -1566,7 +1573,7 @@ a#nextslide:hover, a#prevslide:hover {
 	border-radius: 22px;
 	display: inline-block;
 }
-.camera_neko_skin .camera_caption h2:after{content:none;} 
+.camera_neko_skin .camera_caption h2:after{content:none;}
 .camera_neko_skin .camera_caption p { display:none;}
 
 .camera_neko_skin .camera_caption > div{padding:22px;}
@@ -1590,7 +1597,7 @@ a#nextslide:hover, a#prevslide:hover {
 		left:22px;
 		width:50%;
 	}
-	
+
 	.owlCaption p {display:block;}
 }
 
@@ -1647,7 +1654,7 @@ a#nextslide:hover, a#prevslide:hover {
 	}
 	#homeCarousel .owl-pagination {text-align: left;}
 
-	
+
 	/* Camera slider */
 	.camera_caption {width:40%;}
 	.camera_caption h1 { font-size: 27px;}
@@ -1671,7 +1678,7 @@ a#nextslide:hover, a#prevslide:hover {
 		margin-top:66px;
 	}
 
-	
+
 
 	.camera_caption h1 { font-size: 33px;}
 	.camera_caption h2 { font-size: 22px; }
@@ -1755,11 +1762,11 @@ nav#subnav{padding:0;}
 #videoBg{ height:450px; position:relative; }
 
 @media(min-width:768px){
-	
+
 	.formatIcon i {font-size: 33px;}
 }
 @media(min-width:992px){
-	
+
 }
 
 @media(min-width:1200px){
@@ -1816,7 +1823,7 @@ header#project{padding:22px 0;}
 	left:0;
 	right:0;
 	bottom:0;
-	z-index:10; 
+	z-index:10;
 	background:#fff;
 	height:1000px;
 }
@@ -1992,7 +1999,7 @@ a.btnSwitcher {
 .btnSwitcher.active, .btnSwitcher:hover {
 	border-color:#eee;
 	background:#eee;
-} 
+}
 /* font icon test */
 ul.iconsTest {
 	margin:0 0 22px 0;
