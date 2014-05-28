@@ -690,7 +690,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
  * limitations under the License.
  * ======================================================================== */
 
-/*
+
 +function ($) { "use strict";
 
   // DROPDOWN CLASS DEFINITION
@@ -826,8 +826,6 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
 
 }(window.jQuery);
 
-
-*/
 
 
 
